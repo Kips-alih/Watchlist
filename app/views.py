@@ -10,3 +10,11 @@ def index():
     '''
     message="Hello world!"
     return render_template('index.html',message=message) #The first message on the left of the = sign, represents the variable in the template. While the one to the right represents the variable in our view function.
+
+@app.route('/movie/<movie_id>')
+def movie(movie_id):
+
+    '''
+    View movie page function that returns the movie details page and its data
+    '''
+    return render_template('movie.html',id = movie_id)
