@@ -28,6 +28,7 @@ class ProdConfig(Config):
     Args:
         Config: The parent configuration class with General configuration settings
     '''
+    SQLALCHEMY_DATABASE_URI = os.environ.get("DATABASE_URL")
     pass
 #Newly added class with new SQLALCHEMY_DATABASE_URI to connect to our test database
 class TestConfig(Config):
