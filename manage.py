@@ -5,7 +5,7 @@ from flask_script import Server
 from flask_migrate import Migrate, MigrateCommand
 
 # Creating app instance
-app = create_app('test') #Updated so that we can use the test database URI.
+app = create_app('production') #Update for production
 
 manager = Manager(app)
 manager.add_command('server',Server)
